@@ -1,0 +1,31 @@
+{% extends "cars/car_page.html" %}
+
+{% block style %}
+table, th, td {border: 1px solid black;  border-collapse: collapse;}
+{% endblock %}
+
+{% block cars_list %}
+{% if cars %}
+<table>
+    <tr>
+        <th>Car name</th>
+        <th>Date arrived</th>
+        <th>Last update</th>
+        <th>Warehouse</th>
+    </tr>
+    {% for car in cars %}
+    <tr>
+        <td>{{ car.name }}</td>
+        <td>{{ car.created_date|date:"M d, Y" }}</td>
+        <td>{{ car.updated_date|date:"M d, Y" }}</td>
+        <td>{{ car.warehouse_name }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="{% url 'create_car_form' %}">Add new car</a>
+
+{% else %}
+<p>There are no cars yet</p>
+{% endif %}
+{% endblock %}

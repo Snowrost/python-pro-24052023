@@ -37,9 +37,7 @@ DJANGO_INTERNAL_APPS = [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APPS = [
-    "stock.apps.StockConfig"
-]
+PROJECT_APPS = ["stock.apps.StockConfig"]
 
 INSTALLED_APPS = DJANGO_INTERNAL_APPS + PROJECT_APPS
 
@@ -82,7 +80,7 @@ DATABASES = {
         "USER": os.environ.get("DB_USE", "dealership"),
         "PASSWORD": os.environ.get("DB_PASSWORD", "password"),
         "HOST": os.environ.get("DB_HOST", "127.0.0.1"),
-        "PORT": os.environ.get("DB_PORT", "5432")
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 

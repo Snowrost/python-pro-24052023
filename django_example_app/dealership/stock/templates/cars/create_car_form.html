@@ -1,0 +1,16 @@
+{% extends "cars/car_page.html" %}
+{% block create_car_form %}
+<form action="{% url 'create_car_form' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>Let's create car</h1></legend>
+        <input type="text" name="car_name">
+        <select name="warehouse_id" id="warehouse">
+            {% for warehouse in warehouses %}
+            <option value="{{ warehouse.id }}">{{ warehouse.name }}</option>
+            {% endfor %}
+        </select>
+    </fieldset>
+    <input type="submit" value="Create">
+</form>
+{% endblock %}

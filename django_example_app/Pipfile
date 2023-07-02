@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 django = "*"
 psycopg = {extras = ["binary", "pool"], version = "*"}
+black = "*"
+isort = "*"
 
 [dev-packages]
 

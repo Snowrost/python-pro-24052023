@@ -8,6 +8,7 @@ django = "*"
 psycopg = {extras = ["binary", "pool"], version = "*"}
 black = "*"
 isort = "*"
+djangorestframework = "*"
 
 [dev-packages]
 

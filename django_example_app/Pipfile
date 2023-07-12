@@ -9,6 +9,8 @@ psycopg = {extras = ["binary", "pool"], version = "*"}
 black = "*"
 isort = "*"
 djangorestframework = "*"
+faker = "*"
+gunicorn = "*"
 
 [dev-packages]
 

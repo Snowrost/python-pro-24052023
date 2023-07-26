@@ -11,6 +11,10 @@ isort = "*"
 djangorestframework = "*"
 faker = "*"
 gunicorn = "*"
+django-celery-results = "*"
+django-celery-beat = "*"
+django-kombu = "*"
+celery = "*"
 
 [dev-packages]
 

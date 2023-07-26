@@ -37,7 +37,11 @@ DJANGO_INTERNAL_APPS = [
     "django.contrib.staticfiles",
 ]
 
-DJANGO_THIRD_PARTY_APPS = ["rest_framework"]
+DJANGO_THIRD_PARTY_APPS = [
+    "rest_framework",
+    "django_celery_results",
+    "django_celery_beat",
+]
 
 PROJECT_APPS = ["stock.apps.StockConfig"]
 
@@ -132,3 +136,11 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
 }
+
+CELERY_BROKER_URL = "redis://localhost:6379/0",
+CELERY_TIMEZONE = "UTC"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
+
+CELERY_RESULT_BACKEND = "django-db"

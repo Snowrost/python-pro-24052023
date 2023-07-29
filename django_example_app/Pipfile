@@ -15,6 +15,7 @@ django-celery-results = "*"
 django-celery-beat = "*"
 django-kombu = "*"
 celery = "*"
+uvicorn = "*"
 
 [dev-packages]
 

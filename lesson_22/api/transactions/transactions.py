@@ -10,7 +10,9 @@ transactions_router = APIRouter()
 
 @transactions_router.post("/transactions")
 async def create_transaction(request: CreateTransactionRequest):
-    transaction_id = await TransactionCreator().create_transaction(**request.model_dump())
+    transaction_id = await TransactionCreator().create_transaction(
+        **request.model_dump()
+    )
     return {"id": transaction_id}
 
 

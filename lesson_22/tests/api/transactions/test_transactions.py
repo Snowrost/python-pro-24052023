@@ -1,6 +1,7 @@
-from tests.api import test_client
-from domain.models import Transaction
 from sqlalchemy import select
+
+from domain.models import Transaction
+from tests.api import test_client
 
 
 def test_create_transaction(db):

@@ -6,7 +6,7 @@ from domain.models import Transaction
 
 class TransactionCreator:
     async def create_transaction(
-            self, amount: int, transaction_date: datetime, description: str
+        self, amount: int, transaction_date: datetime, description: str
     ):
         transaction = Transaction(
             amount=amount, transaction_date=transaction_date, description=description

@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware import Middleware
 
 from api.transactions import transactions_router
-from core.middlewares import SQLAlchemyMiddleware
+from core.middlewares import SQLAlchemyMiddleware, TestHttpMiddleware
 
 
 def init_routers(_app: FastAPI) -> None:
@@ -12,7 +12,7 @@ def init_routers(_app: FastAPI) -> None:
 
 
 def middlewares() -> List[Middleware]:
-    return [Middleware(SQLAlchemyMiddleware)]
+    return [Middleware(SQLAlchemyMiddleware), Middleware(TestHttpMiddleware)]
 
 
 def create_app() -> FastAPI:
